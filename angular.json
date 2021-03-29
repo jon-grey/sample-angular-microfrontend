@@ -39,7 +39,7 @@
               "src/assets/css/paper-dashboard.css",
               "src/assets/css/demo.css",
               "src/assets/css/themify-icons.css"
-            ] 
+            ]
           },
           "configurations": {
             "production": {
@@ -52,7 +52,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -190,7 +189,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -225,7 +223,8 @@
             "karmaConfig": "projects/client-a/karma.conf.js",
             "styles": [
               {
-                "input": "projects/client-a/styles.css"
+                "input": "projects/client-a/styles.css",
+                "inject": true
               }
             ],
             "scripts": [],
@@ -298,7 +297,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -333,7 +331,8 @@
             "karmaConfig": "projects/client-b/karma.conf.js",
             "styles": [
               {
-                "input": "projects/client-b/styles.css"
+                "input": "projects/client-b/styles.css",
+                "inject": true
               }
             ],
             "scripts": [],
@@ -390,7 +389,7 @@
   },
   "schematics": {
     "@schematics/angular:component": {
-      "styleext": "css"
+      "style": "css"
     }
   }
 }
