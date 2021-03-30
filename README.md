@@ -1,3 +1,4 @@
+
 # Micro Apps with Web Components and Angular Elements
 
 This example consists of three Angular projects that demonstrate how to use Web Components/ Angular Elements to implement a shell that loads micro apps:
@@ -32,3 +33,9 @@ For using everything together, you have to build the example and run it:
 npm run build
 npm start
 ```
+
+# Issues
+
+Have faced this error with angular 8 and 11:
+
+![](2021-03-30-01-51-59.png)

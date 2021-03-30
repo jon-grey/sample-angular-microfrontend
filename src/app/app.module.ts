@@ -1,6 +1,8 @@
+import { EmptyComponent } from './../../projects/client-b/src/app/empty/empty.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import {APP_BASE_HREF} from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -12,22 +14,23 @@ import { EmptyComponent } from './empty/empty.component';
       AppComponent,
       SidebarComponent,
       NavbarComponent,
-      EmptyComponent
+      EmptyComponent,
    ],
    imports: [
       BrowserModule,
-      // RouterModule.forRoot([
-      //   { path: '', pathMatch: 'full', redirectTo: 'home'},
-      //   {
-      //     path: '**',
-      //     component: EmptyComponent
-      //   }
-      // ], { useHash: true })
+      RouterModule.forRoot([
+
+        { path: '', pathMatch: 'full', redirectTo: 'home'},
+        { path: 'root', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
+        { path: '**', component: EmptyComponent }
+      ], { useHash: true })
    ],
    schemas: [
       CUSTOM_ELEMENTS_SCHEMA
    ],
-   providers: [],
+   providers: [
+    //  {provide: APP_BASE_HREF, useValue : '' }
+    ],
    bootstrap: [
       AppComponent
    ]

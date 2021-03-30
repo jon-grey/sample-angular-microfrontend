@@ -9,7 +9,7 @@ export class ShellService {
   constructor() { }
 
   private config: ShellConfig;
-  
+
   init(config: ShellConfig) {
     this.config = config;
     if (!location.hash && config.initialRoute) {
@@ -57,7 +57,7 @@ export class ShellService {
     }
 
     const elms = document.getElementsByTagName(entry.element);
-    
+
     if (elms.length === 0) {
       throw new Error(`Client ${clientName} is not loaded.`);
     }

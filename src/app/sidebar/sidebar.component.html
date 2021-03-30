@@ -10,38 +10,37 @@
     </div>
     <ul class="nav">
         <li>
-            <a href="#/home">
+            <a (click)="routerNavigate('root')">
                 <i class="ti-home"></i>
                 <p>Home</p>
             </a>
         </li>
 
         <li>
-            <!-- href="#/client-a/page1" -->
-            <a (click)="navigate('/client-a/page1')">
+            <a (click)="shellNavigate('/client-a/page1')">
                 <i class="ti-arrow-top-right"></i>
                 <p>Flights</p>
             </a>
         </li>
 
         <li>
-            <a (click)="navigate('/client-b/page1')">
+            <a (click)="shellNavigate('/client-b/page1')">
                 <i class="ti-user"></i>
                 <p>Passengers</p>
             </a>
         </li>
 
         <li>
-            <a (click)="navigate('/client-c')">
+            <a (click)="shellNavigate('/client-c')">
                 <i class="ti-user"></i>
                 <p>Bookings</p>
             </a>
         </li>
 
         <li>
-            <a (click)="navigate('/client-d/payment')">
+            <a (click)="shellNavigate('/client-d/payment')">
                 <i class="ti-user"></i>
-                <p>Payment</p>
+                <p>Payment 1</p>
             </a>
         </li>
 
@@ -59,6 +58,6 @@
             </a>
             </li>
         -->
-        
+
     </ul>
 </div>
