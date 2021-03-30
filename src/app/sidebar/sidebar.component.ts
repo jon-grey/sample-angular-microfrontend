@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { ShellService } from '../shell/shell.service';
+import { Router } from '@angular/router';
 
+import { ShellService } from '../shell/shell.service';
 
 @Component({
     selector: 'sidebar-cmp',
@@ -8,10 +9,14 @@ import { ShellService } from '../shell/shell.service';
 })
 
 export class SidebarComponent {
-    constructor(private shellService: ShellService) {
+    constructor(private router: Router, private shellService: ShellService) {
     }
 
-    navigate(url: string) {
+    shellNavigate(url: string) {
         this.shellService.navigate(url);
+    }
+
+    routerNavigate(url: string) {
+        this.router.navigate([ url ]);
     }
 }

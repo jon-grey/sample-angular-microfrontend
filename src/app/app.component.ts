@@ -13,7 +13,7 @@ export class AppComponent {
 
   ngOnInit() {
 
-    this.shellService.init({ 
+    this.shellService.init({
       initialRoute: '/home',
       outletId: 'content',
       preload: true,
@@ -35,7 +35,7 @@ export class AppComponent {
           src: 'assets/micro-frontends/client-c/main.js',
           element: 'client-c',
           route: '/client-c'
-        }, 
+        },
         "client-d": {
           loaded: false,
           src: [

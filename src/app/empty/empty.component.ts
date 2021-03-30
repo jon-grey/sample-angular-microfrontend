@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmptyComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    console.log("EmptyComponent1!"); }
 
   ngOnInit() {
+    console.log("EmptyComponent2!");
   }
 
 }
